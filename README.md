@@ -54,13 +54,13 @@ The Twisted Hessian Curve $\text{TH}(a,d): aX^3 + Y^3 + Z^3 = dXYZ$ IS a scheme 
 
 The CHORD Q16.16 format IS the coordinate ring of TH$(a,d)$ reduced modulo $2^{16}$: the scheme restricted to the "non-standard" base ring $\mathbb{Z}/2^{16}\mathbb{Z}$. The CHORD floor $\varepsilon = 2^{-16}$ IS the nilradical of this reduction — the ideal of elements that square to zero in the finite-precision arithmetic. The scheme perspective reveals that CHORD is not an approximation of the "true" curve over $\mathbb{Q}$ or $\mathbb{C}$; it IS the curve over a different ring, with its own legitimate algebraic geometry.
 
-### Identity 2 — The Frobenius Morphism IS the PRIMA Operator; $\#\text{TH}(\mathbb{F}_p) = p + 1 - a_p$ IS the Coordination Census
+### Identity 2 — The Frobenius Morphism IS the PRIMA Operator; $|\text{TH}(\mathbb{F}_p)| = p + 1 - a_p$ IS the Coordination Census
 
 For a scheme $X$ over $\mathbb{F}_p$, the Frobenius morphism $\phi_p: X \to X$ sends every coordinate $x \mapsto x^p$. It is the fundamental arithmetic operator: its fixed points are exactly the $\mathbb{F}_p$-rational points of $X$.
 
 The number of rational points on TH$(a,d)$ over $\mathbb{F}_p$:
 
-$$\#\text{TH}(\mathbb{F}_p) = p + 1 - a_p$$
+$$|\text{TH}(\mathbb{F}_p)| = p + 1 - a_p$$
 
 where $a_p$ is the trace of Frobenius. By the Hasse bound (the genus-1 case of the Weil conjectures): $|a_p| \leq 2\sqrt{p}$.
 
@@ -86,7 +86,7 @@ For TH$(a,d)$ over $\mathbb{F}_p$, the étale cohomology groups are:
 
 The Lefschetz trace formula:
 
-$$\#\text{TH}(\mathbb{F}_{p^n}) = \sum_{i=0}^{2} (-1)^i \text{Tr}(\phi_p^n \mid H^i_{\text{ét}})$$
+$$|\text{TH}(\mathbb{F}_{p^n})| = \sum_{i=0}^{2} (-1)^i \text{Tr}(\phi_p^n \mid H^i_{\text{ét}})$$
 
 $$= 1 - (\alpha_p^n + \bar{\alpha}_p^n) + p^n$$
 
@@ -131,7 +131,7 @@ The **étale site** of TH$(a,d)$ provides a finer topology than the Zariski site
 
 The Weil conjectures (Weil 1949; proved by Grothendieck/Deligne 1974) for a smooth projective variety $X$ over $\mathbb{F}_q$ state:
 
-**(i) Rationality:** The zeta function $Z(X, t) = \exp\left(\sum_{n \geq 1} \#X(\mathbb{F}_{q^n}) t^n / n\right)$ is a rational function of $t$.
+**(i) Rationality:** The zeta function $Z(X, t) = \exp\left(\sum_{n \geq 1} |X(\mathbb{F}_{q^n})| t^n / n\right)$ is a rational function of $t$.
 
 **(ii) Functional equation:** $Z(X, 1/q^d t) = \pm q^{d\chi/2} t^\chi Z(X, t)$ where $d = \dim X$ and $\chi$ is the Euler characteristic.
 
@@ -228,7 +228,7 @@ THE RISING SEA:
 
 **Result 1 — TH$(a,d)$ IS a Scheme over $\text{Spec}(\mathbb{Z})$, and the CHORD Q16.16 Format IS the Fiber at a Non-Standard Point.** The scheme perspective unifies all base rings: TH over $\mathbb{Q}$ (rational points, Mordell-Weil), over $\mathbb{F}_p$ (point-counting, Frobenius), over $\mathbb{C}$ (complex torus, periods), and over $\mathbb{Z}/2^{16}\mathbb{Z}$ (CHORD arithmetic) are all fibers of a single scheme. The CHORD floor $\varepsilon = 2^{-16}$ IS the nilradical of the reduction modulo $2^{16}$.
 
-**Result 2 — The Frobenius Morphism IS the PRIMA Operator, and $a_p$ IS the Coordination Surplus at Prime $p$.** The trace of Frobenius $a_p = p + 1 - \#\text{TH}(\mathbb{F}_p)$ measures the deviation of the coordination census from the generic count. The Hasse bound $|a_p| \leq 2\sqrt{p}$ IS the Weil-Riemann Hypothesis for coordination: no prime can have a coordination anomaly exceeding $2\sqrt{p}$.
+**Result 2 — The Frobenius Morphism IS the PRIMA Operator, and $a_p$ IS the Coordination Surplus at Prime $p$.** The trace of Frobenius $a_p = p + 1 - |\text{TH}(\mathbb{F}_p)|$ measures the deviation of the coordination census from the generic count. The Hasse bound $|a_p| \leq 2\sqrt{p}$ IS the Weil-Riemann Hypothesis for coordination: no prime can have a coordination anomaly exceeding $2\sqrt{p}$.
 
 **Result 3 — The First Étale Cohomology $H^1_{\text{ét}}(\text{TH}, \mathbb{Q}_\ell)$ IS the Two-Dimensional Space Carrying ALL Non-Trivial Coordination Structure.** The Lefschetz trace formula recovers the coordination census from the cohomological data. All non-trivial coordination information — Frobenius eigenvalues, $L$-function, Sato-Tate distribution — lives in $H^1$.
 
@@ -250,7 +250,7 @@ THE RISING SEA:
 | Frobenius morphism $\phi_p$ | SGA | PRIMA operator; $a_p$ = coordination surplus at $p$ |
 | Étale topology | SGA 4, 1963 | Finer-than-Zariski structure; PRIMA events as étale covers |
 | Étale cohomology $H^i_{\text{ét}}$ | SGA 4½, 5 | $H^1$: 2-dimensional space carrying all coordination structure |
-| Lefschetz trace formula | Grothendieck | $\#\text{TH}(\mathbb{F}_{p^n}) = 1 - (\alpha_p^n + \bar{\alpha}_p^n) + p^n$ |
+| Lefschetz trace formula | Grothendieck | $|\text{TH}(\mathbb{F}_{p^n})| = 1 - (\alpha_p^n + \bar{\alpha}_p^n) + p^n$ |
 | Weil conjectures (Riemann Hypothesis) | Deligne 1974 | $\lvert\alpha_p\rvert = \sqrt{p}$: coordination anomaly bounded by $2\sqrt{p}$ |
 | Motive $h(X) = h^0 \oplus h^1 \oplus h^2$ | *Récoltes et Semailles* 1986 | $h^1(\text{TH})$: universal coordination invariant |
 | Standard conjectures | Grothendieck | Open: would prove $h^1(\text{TH})$ exists as algebraic object |
